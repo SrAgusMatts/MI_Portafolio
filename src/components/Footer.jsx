@@ -8,7 +8,6 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-row">
         <span>© {year} {PROFILE.name}. Todos los derechos reservados.</span>
-        <span className="made-with">Hecho con React</span>
       </div>
     </footer>
   );
