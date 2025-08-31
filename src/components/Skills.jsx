@@ -1,16 +1,18 @@
-function Skills() {
-    const skills = ["React", "JavaScript", "TypeScript", "C#", ".NET", "SQLite", "PHP"];
+// src/components/Skills.jsx
+import React from "react";
+import { SKILLS } from "../data";
 
-    return (
-        <section id="skills" className="section">
-            <h2 className="section-title">Habilidades</h2>
-            <div className="skills-container">
-                {skills.map((s, i) => (
-                    <span key={i} className="skill-badge">{s}</span>
-                ))}
-            </div>
-        </section>
-    );
+export default function Skills() {
+  return (
+    <section id="skills" className="section">
+      <div className="container">
+        <h2 className="section-title">Habilidades</h2>
+        <div className="skills-container">
+          {SKILLS.map((s, i) => (
+            <span key={i} className="skill-badge">{s}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Skills;
