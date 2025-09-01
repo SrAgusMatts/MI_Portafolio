@@ -25,7 +25,6 @@ body,
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
-  /* Fondo liso: evita juntas entre secciones */
   background: #0f0f1a;
   color: var(--fg);
   line-height: 1.6;
@@ -200,12 +199,10 @@ body {
   display: grid;
   place-items: center;
   text-align: center;
-  /* sin fondo propio (hereda del overlay global) */
   background: transparent;
   position: relative;
 }
 
-/* Eliminado el pseudo-elemento del Hero que generaba transición perceptible */
 /* .hero::before { none } */
 
 .hero-title {
@@ -377,4 +374,55 @@ body {
 
 .made-with {
   opacity: .85;
+}
+
+/* === Reveal on load/scroll (accesible) === */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Estado inicial: oculto suave */
+  .section,
+  .hero .hero-inner {
+    opacity: 0;
+    transform: translateY(12px);
+    will-change: opacity, transform;
+  }
+
+  /* Visible (lo setea el hook al cargar o al entrar en viewport) */
+  .section.is-visible,
+  .hero .hero-inner.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity .6s ease, transform .6s ease;
+  }
+
+  /* Pequeño “stagger” en tarjetas de proyectos cuando la sección aparece */
+  #projects.is-visible .project-card {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .5s ease, transform .5s ease;
+  }
+
+  #projects.is-visible .project-card:nth-child(1) {
+    transition-delay: .05s;
+    opacity: 1;
+    transform: none;
+  }
+
+  #projects.is-visible .project-card:nth-child(2) {
+    transition-delay: .10s;
+    opacity: 1;
+    transform: none;
+  }
+
+  #projects.is-visible .project-card:nth-child(3) {
+    transition-delay: .15s;
+    opacity: 1;
+    transform: none;
+  }
+
+  #projects.is-visible .project-card:nth-child(4) {
+    transition-delay: .20s;
+    opacity: 1;
+    transform: none;
+  }
 }

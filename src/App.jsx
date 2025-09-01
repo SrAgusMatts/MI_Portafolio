@@ -9,8 +9,11 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import useRevealOnScroll from "./hooks/useRevealOnScroll";
 
 function App() {
+  useRevealOnScroll(".section, .hero .hero-inner");
+
   return (
     <div className="app">
       <a href="#main" className="skip-link">Saltar al contenido</a>

@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React from "react";
 import { SKILLS } from "../data";
 

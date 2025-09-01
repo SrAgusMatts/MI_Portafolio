@@ -1,4 +1,3 @@
-// src/components/Experience.jsx
 import React from "react";
 import { EXPERIENCE } from "../data";
 
