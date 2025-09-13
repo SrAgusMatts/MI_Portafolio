@@ -1,4 +1,3 @@
-// src/data/index.js
 export const PROFILE = {
   name: "Agustín Mattos",
   role: "Desarrollador Web · Técnico en Programación",

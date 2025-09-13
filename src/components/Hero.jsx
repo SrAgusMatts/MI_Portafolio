@@ -1,16 +1,13 @@
-// src/components/Hero.jsx
 import React from "react";
 import { PROFILE } from "../data";
 
-// Detecta base pública (Vite/CRA) y arma la ruta al archivo en /public
 const PUBLIC_BASE =
   (typeof import.meta !== "undefined" && import.meta.env && typeof import.meta.env.BASE_URL === "string")
     ? import.meta.env.BASE_URL
     : (typeof process !== "undefined" && process.env && process.env.PUBLIC_URL) || "/";
 
 export default function Hero() {
-  // Opción A: usa lo que definas en PROFILE.photoPath (p.ej. "foto-perfil.jpg")
-  // Opción B: por defecto busca "foto-perfil.jpg" en /public
+
   const photoPath = PROFILE.photoPath
     ? `${PUBLIC_BASE}${PROFILE.photoPath}`
     : `${PUBLIC_BASE}foto-perfil.jpg`;
