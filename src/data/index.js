@@ -1,4 +1,3 @@
-// src/data/index.js
 export const PROFILE = {
   name: "Agustín Mattos",
   role: "Desarrollador Web · Técnico en Programación",
@@ -7,29 +6,23 @@ export const PROFILE = {
   email: "agustingustavomattos@gmail.com",
   github: "https://github.com/SrAgusMatts",
   linkedin: "https://linkedin.com/in/agustinmattos",
+  photoPath: "avatar-logo.jpeg",
 };
 
 export const PROJECTS = [
   {
-    title: "Gestor de Tareas",
+    title: "Generador de contratos",
     description:
-      "Aplicación web para administrar tareas y eventos con persistencia local y vistas filtradas.",
-    tech: ["React", ".NET", "SQLite"],
-    link: "#"
-  },
-  {
-    title: "E-commerce de Velas",
-    description:
-      "Sitio minimalista para venta de velas aromáticas con catálogo, carrito y checkout básico.",
-    tech: ["React", "PHP", "SQLite"],
-    link: "#"
+      "Aplicacion web sencilla para la creacion de contratos de trabajos y servicios.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    link: "https://sragusmatts.github.io/Generador-de-contratos-automatizado/"
   }
 ];
 
-export const SKILLS = ["React", "JavaScript", "TypeScript", "C#", ".NET", "SQLite", "PHP"];
+export const SKILLS = ["React", "JavaScript", "TypeScript", "C#", ".NET", "SQLite"];
 
 export const EXPERIENCE = [
-  { year: "2025", role: "Estudiante de Ingeniería en Sistemas", place: "UTN San Francisco" },
-  { year: "2024", role: "Técnico en Programación", place: "Escuela PROA" },
-  { year: "2024", role: "Prácticas Laborales – Mantenimiento de sitios web", place: "Trizap" }
+  { year: "2025 - Actual", role: "Estudiante de Ingeniería en Sistemas", place: "UTN San Francisco" },
+  { year: "2018 - 2024", role: "Técnico en Programación", place: "Escuela PROA" },
+  { year: "2025", role: "Desarrollador Web Full Stack", place: "Trizap" }
 ];
