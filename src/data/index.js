@@ -3,7 +3,7 @@ export const PROFILE = {
   role: "Desarrollador Web · Técnico en Programación",
   summary:
     "Estudiante de Ingeniería en Sistemas (UTN San Francisco) y técnico en programación. Enfocado en construir aplicaciones web modernas, mantenibles y eficientes con React, .NET/C# y SQLite.",
-  email: "agustingustavomattos@gmail.com",
+  // email: "agustingustavomattos@gmail.com",
   github: "https://github.com/SrAgusMatts",
   linkedin: "https://linkedin.com/in/agustinmattos",
   photoPath: "avatar-logo.jpeg",
