@@ -1,12 +1,37 @@
-# React + Vite
+💻 Portafolio Profesional de Agustín Mattos
+👋 ¡Hola! Soy Agustín Mattos, un Desarrollador Web y Técnico en Programación.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Actualmente, soy estudiante de Ingeniería en Sistemas (UTN San Francisco) y estoy enfocado en construir aplicaciones web modernas, mantenibles y eficientes utilizando tecnologías clave como React, .NET/C# y SQLite.
 
-Currently, two official plugins are available:
+🚀 Tecnologías y Habilidades
+Estas son las tecnologías con las que trabajo:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Categoría	Tecnologías/Habilidades
+Lenguajes Clave	JavaScript, TypeScript, C#
+Frameworks/Librerías	React, .NET
+Bases de Datos	SQLite
+Web Fundamentos	HTML, CSS
 
-## Expanding the ESLint configuration
+Exportar a Hojas de cálculo
+✨ Proyectos Destacados
+Aquí puedes ver un ejemplo de mi trabajo, con un enlace directo a la aplicación:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Proyecto	Descripción	Tecnologías Clave	Enlace
+Generador de contratos	Aplicación web sencilla para la creación de contratos de trabajos y servicios.	JavaScript, HTML, CSS	Ver Demo
+
+Exportar a Hojas de cálculo
+(Si tienes más proyectos, agrégalos siguiendo este formato de tabla.)
+
+📚 Experiencia y Formación
+Período	Rol	Lugar
+2025 - Actual	Estudiante de Ingeniería en Sistemas	UTN San Francisco
+2025	Desarrollador Web Full Stack	Trizap
+2018 - 2024	Técnico en Programación	Escuela PROA
+
+Exportar a Hojas de cálculo
+📧 Contacto
+Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!
+
+GitHub: https://github.com/SrAgusMatts
+
+LinkedIn: https://linkedin.com/in/agustinmattos
