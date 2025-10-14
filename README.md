@@ -35,5 +35,6 @@ Aquí puedes ver un ejemplo de mi trabajo, con un enlace directo a la aplicació
 
 Siempre estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!
 
+* **Correo Electrónico:** agustingustavomattos@gmail.com
 * **GitHub:** [https://github.com/SrAgusMatts](https://github.com/SrAgusMatts)
 * **LinkedIn:** [https://linkedin.com/in/agustinmattos](https://linkedin.com/in/agustinmattos)
