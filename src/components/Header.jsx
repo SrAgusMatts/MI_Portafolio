@@ -1,6 +1,10 @@
 import React from "react";
+import useSmoothScroll from "../hooks/useSmoothScroll"; 
 
 export default function Header() {
+  
+  useSmoothScroll('.site-header a[href^="#"]'); 
+
   return (
     <header className="site-header">
       <nav className="container nav">
