@@ -13,7 +13,7 @@ export default function Hero() {
     : `${PUBLIC_BASE}foto-perfil.jpg`;
 
   return (
-    <section className="hero">
+    <section id="beginning" className="hero">
       <div className="container hero-inner">
         <div className="hero-avatar" aria-hidden="true">
           <img
