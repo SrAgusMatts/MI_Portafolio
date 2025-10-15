@@ -9,6 +9,7 @@ export default function Header() {
     <header className="site-header">
       <nav className="container nav">
         <ul className="nav-list">
+          <li><a href="#beginning">Inicio</a></li>
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#skills">Habilidades</a></li>
