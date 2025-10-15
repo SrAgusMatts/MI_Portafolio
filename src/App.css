@@ -56,7 +56,6 @@ body {
     linear-gradient(135deg, #0f0f1a 0%, #16172a 50%, #121329 100%);
 }
 
-/* Dither/ruido sutil para eliminar banding en monitores/zoom */
 .app::after {
   content: "";
   position: fixed;
@@ -97,14 +96,14 @@ body {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(8px);
-  background: rgba(15, 15, 26, 0.75); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+  background: rgba(15, 15, 26, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: .8rem 0;
 }
 
@@ -117,7 +116,7 @@ body {
 
 
 .nav-list {
-  display: none; 
+  display: none;
   list-style: none;
   gap: 1.25rem;
   margin: 0;
@@ -128,19 +127,19 @@ body {
   text-decoration: none;
   color: #d1d5db;
   font-size: 1rem;
-  padding: .4rem 1.1rem; 
+  padding: .4rem 1.1rem;
   background: transparent;
   border-radius: 8px;
-  transition: all 0.3s ease-out; 
+  transition: all 0.3s ease-out;
 }
 
 .nav-list a:hover {
   color: #fff;
-  padding: .4rem 1.1rem; 
-  background: rgba(6, 10, 224, 0.25); 
-  border: 1px solid var(--primary, #818cf8); 
+  padding: .4rem 1.1rem;
+  background: rgba(6, 10, 224, 0.25);
+  border: 1px solid var(--primary, #818cf8);
   box-shadow: 0 0 12px rgba(6, 10, 224, 0.6);
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 @media(min-width:768px) {
@@ -251,7 +250,7 @@ body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  padding: 3px; /* aro */
+  padding: 3px;
   background: linear-gradient(90deg, var(--primary), var(--primary-2));
   box-shadow: 0 12px 28px rgba(0, 0, 0, .35), 0 0 0 6px rgba(99, 102, 241, .08);
   margin-bottom: 1rem;
@@ -270,33 +269,159 @@ body {
   display: block;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%; /* 👈 mueve la imagen un poco hacia abajo */
+  object-position: center 25%;
   background: #0f0f1a;
   filter: saturate(1.02) contrast(1.02);
 }
 
+/* ========================================= */
+/* === Skills Section === */
+/* ========================================= */
 
-/* === Skills === */
-.skills-container {
+/* ========================================= */
+/* === Estilos para la Estructura (Grid) === */
+/* ========================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding-top: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-column {
+  padding: 1rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================================= */
+/* === Estilos para los Títulos de Columna === */
+/* ========================================= */
+
+.column-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 1.45rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  position: relative;
+  cursor: default;
+  transition: color 0.3s ease;
+  line-height: 1.2;
+}
+
+.column-icon {
+  color: var(--primary-dark, #5052c9);
+  flex-shrink: 0;
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;
+  height: 3px;
+  background-color: var(--primary-light, rgba(99, 102, 241, .4));
+  border-radius: 2px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.column-title:hover {
+  color: var(--primary-dark, #5052c9);
+}
+
+.column-title:hover::after {
+  width: 80%;
+  background-color: var(--primary);
+}
+
+
+/* ========================================= */
+/* === Estilos para los Badges y Logotipos === */
+/* ========================================= */
+
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: .8rem;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .skill-badge {
-  padding: .55rem 1.1rem;
-  background: rgba(99, 102, 241, .1);
-  border: 1px solid var(--primary);
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: .6rem 1.2rem;
+  background: var(--skill-badge-bg, rgba(99, 102, 241, .15));
+  border: 1px solid var(--primary-light, rgba(99, 102, 241, .3));
+  border-radius: 25px;
   color: var(--primary);
   font-weight: 500;
-  transition: .25s ease;
+  transition: all .3s ease;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.skill-logo {
+  min-width: 1rem;
+  height: 1rem;
+  margin-right: 0.1rem;
+  color: var(--primary-dark, #8b92e3);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .skill-badge:hover {
   background: var(--primary);
   color: #fff;
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(99, 102, 241, .3);
+  border-color: var(--primary);
+}
+
+.skill-badge:hover .skill-logo {
+  color: #fff;
+  transform: rotate(5deg);
+}
+
+/* ========================================= */
+/* === Media Query para Responsividad === */
+/* ========================================= */
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .column-title {
+    font-size: 1.3rem;
+  }
+
+  .skill-badge {
+    font-size: 0.9rem;
+    padding: .5rem 1rem;
+  }
 }
 
 /* === Projects === */
@@ -503,7 +628,6 @@ body {
 /* === Reveal on load/scroll (accesible) === */
 @media (prefers-reduced-motion: no-preference) {
 
-  /* Estado inicial: oculto suave */
   .section,
   .hero .hero-inner {
     opacity: 0;
@@ -511,7 +635,6 @@ body {
     will-change: opacity, transform;
   }
 
-  /* Visible (lo setea el hook al cargar o al entrar en viewport) */
   .section.is-visible,
   .hero .hero-inner.is-visible {
     opacity: 1;
@@ -519,7 +642,6 @@ body {
     transition: opacity .6s ease, transform .6s ease;
   }
 
-  /* Pequeño “stagger” en tarjetas de proyectos cuando la sección aparece */
   #projects.is-visible .project-card {
     opacity: 0;
     transform: translateY(10px);
