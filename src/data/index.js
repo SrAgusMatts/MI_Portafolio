@@ -18,12 +18,29 @@ export const PROFILE = {
 
 export const PROJECTS = [
   {
-    title: "Generador de contratos",
+    title: "Sistema de Diseño UI (Storybook)",
     description:
-      "Aplicacion web sencilla para la creacion de contratos de trabajos y servicios.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    link: "https://sragusmatts.github.io/Generador-de-contratos-automatizado/"
-  }
+      "Librería de componentes atómicos construida con React, TypeScript y Vite. Incluye documentación interactiva (MDX), controles de estados y arquitectura escalable.",
+    tech: ["React", "TypeScript", "Storybook", "Vite"],
+    // Aquí pusimos el link directo a la documentación que creamos
+    link: "https://storybook-static-iota-two.vercel.app"
+  },
+  {
+    title: "Buscador de Películas",
+    description:
+      "Sitio de busqueda de peliculas para ver informacion breve sobre cualquier tipo de peliculas con un estilo sencillo y adaptable para el usuario.",
+    tech: ["React", "JavaScript", "Zustand", "React Query", "Vite"],
+    // Aquí pusimos el link directo a la documentación que creamos
+    link: "https://buscador-peliculas-eta.vercel.app"
+  },
+  {
+    title: "TO-DO List",
+    description:
+      "Herramienta sencilla de anotador de tareas simples y sencillas como recordatorio y guardados en el sistema local para no perder ninguna tarea.",
+    tech: ["React", "JavaScript", "Zustand", "Vite"],
+    // Aquí pusimos el link directo a la documentación que creamos
+    link: "https://todo-zustand-two.vercel.app/"
+  },
 ];
 
 export const SkillIconsMap = {
