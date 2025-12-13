@@ -50,6 +50,7 @@ export const SkillIconsMap = {
   "SQLite": SiSqlite,
   "Node": SiNodedotjs,
   "Express": SiExpress,
+  "Zustand": FaCode,
   "Python": SiPython,
   "Angular": SiAngular,
   "NoSQL": SiMongodb, // Usamos MongoDB como ejemplo común de NoSQL
