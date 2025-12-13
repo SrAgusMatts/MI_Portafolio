@@ -59,7 +59,7 @@ export const SkillIconsMap = {
 
 export const KnowSkills = ["React", "JavaScript", "TypeScript", "C#", ".NET", "SQLite"];
 
-export const InProccess = ["Node", "Express", "Python"];
+export const InProccess = ["Node", "Express", "Zustand","Python"];
 
 export const TryStartKnow = ["Angular", "NoSQL", "Vue"];
 
