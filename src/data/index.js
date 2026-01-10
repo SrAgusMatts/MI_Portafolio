@@ -22,7 +22,7 @@ export const PROJECTS = [
     description:
       "Aplicación web que simula las funcionalidades básicas de Trello, permitiendo a los usuarios crear tableros, listas y tarjetas para organizar tareas de manera visual e intuitiva junto a un inicio de sesión para permitir la personalización de cada usuario.",
     tech: ["React", "Vite", "CSS"],
-    link: "https://storybook-static-iota-two.vercel.app"
+    link: "https://kanban-trello-redesing.vercel.app"
   },
   {
     title: "Buscador de Películas",
