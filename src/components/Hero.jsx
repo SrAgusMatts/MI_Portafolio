@@ -1,39 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { PROFILE } from "../data";
 
-const PUBLIC_BASE =
-  (typeof import.meta !== "undefined" && import.meta.env && typeof import.meta.env.BASE_URL === "string")
-    ? import.meta.env.BASE_URL
-    : (typeof process !== "undefined" && process.env && process.env.PUBLIC_URL) || "/";
+const PUBLIC_BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL) || "/";
 
 export default function Hero() {
+  const [text, setText] = useState("");
+  const fullText = PROFILE.role;
 
-  const photoPath = PROFILE.photoPath
-    ? `${PUBLIC_BASE}${PROFILE.photoPath}`
-    : `${PUBLIC_BASE}foto-perfil.jpg`;
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setText(fullText.slice(0, index + 1));
+      index++;
+      if (index === fullText.length) clearInterval(interval);
+    }, 50);
+    return () => clearInterval(interval);
+  }, [fullText]);
+
+  const photoPath = PROFILE.photoPath ? `${PUBLIC_BASE}${PROFILE.photoPath}` : `${PUBLIC_BASE}foto-perfil.jpg`;
 
   return (
     <section id="beginning" className="hero">
       <div className="container hero-inner">
-        <div className="hero-avatar" aria-hidden="true">
-          <img
-            src={photoPath}
-            alt={`Foto de ${PROFILE.name}`}
-            className="avatar-img"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-            width={200}
-            height={200}
-            sizes="(min-width: 768px) 200px, 160px"
-          />
+        <div className="hero-avatar">
+          <img src={photoPath} alt={PROFILE.name} />
         </div>
 
-        <h1 className="hero-title">{PROFILE.name}</h1>
-        <p className="hero-subtitle">{PROFILE.role}</p>
-        <p className="hero-text">{PROFILE.summary}</p>
+        <h1 className="hero-title glitch-text">{PROFILE.name.toUpperCase()}</h1>
+        <p className="hero-subtitle">
+          {">"} {text}<span className="blink">_</span>
+        </p>
+        <p className="hero-text text-green">{PROFILE.summary}</p>
 
-        <a href="#projects" className="btn btn-primary">Ver Proyectos</a>
+        <a href="#projects" className="btn">
+          [ EJECUTAR PROYECTOS ]
+        </a>
       </div>
     </section>
   );

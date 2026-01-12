@@ -10,7 +10,6 @@ export const PROFILE = {
   role: "Desarrollador Web · Técnico en Programación",
   summary:
     "Estudiante de Ingeniería en Sistemas (UTN San Francisco) y técnico en programación. Enfocado en construir aplicaciones web modernas, mantenibles y eficientes con React, .NET/C# y SQLite.",
-  // email: "agustingustavomattos@gmail.com",
   github: "https://github.com/SrAgusMatts",
   linkedin: "https://linkedin.com/in/agustinmattos",
   photoPath: "avatar-logo.jpeg",
@@ -37,6 +36,20 @@ export const PROJECTS = [
       "Herramienta sencilla de anotador de tareas simples y sencillas como recordatorio y guardados en el sistema local para no perder ninguna tarea.",
     tech: ["React", "JavaScript", "Zustand", "Vite"],
     link: "https://todo-zustand-two.vercel.app/"
+  },
+  {
+    title: "Semi-Clon de trello",
+    description:
+      "Aplicación web que simula las funcionalidades básicas de Trello, permitiendo a los usuarios crear tableros, listas y tarjetas para organizar tareas de manera visual e intuitiva junto a un inicio de sesión para permitir la personalización de cada usuario.",
+    tech: ["React", "Vite", "CSS"],
+    link: "https://kanban-trello-redesing.vercel.app"
+  },
+  {
+    title: "Semi-Clon de trello",
+    description:
+      "Aplicación web que simula las funcionalidades básicas de Trello, permitiendo a los usuarios crear tableros, listas y tarjetas para organizar tareas de manera visual e intuitiva junto a un inicio de sesión para permitir la personalización de cada usuario.",
+    tech: ["React", "Vite", "CSS"],
+    link: "https://kanban-trello-redesing.vercel.app"
   },
 ];
 
