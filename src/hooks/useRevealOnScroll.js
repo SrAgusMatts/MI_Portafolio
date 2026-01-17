@@ -1,4 +1,3 @@
-// src/hooks/useRevealOnScroll.js
 import { useEffect } from "react";
 
 export default function useRevealOnScroll(
@@ -9,7 +8,6 @@ export default function useRevealOnScroll(
     const els = Array.from(document.querySelectorAll(selector));
     if (els.length === 0) return;
 
-    // Fallback: si no hay IO, mostramos todo.
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("is-visible"));
       return;
@@ -20,7 +18,7 @@ export default function useRevealOnScroll(
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target); // solo la primera vez
+            observer.unobserve(entry.target);
           }
         });
       },

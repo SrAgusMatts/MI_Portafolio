@@ -1,15 +1,17 @@
 import React from "react";
-import { PROJECTS } from "../data";
+import { useLanguage } from "./LanguageContext";
 
 export default function Projects({ onViewAll }) {
-  
+  const { t, data } = useLanguage();
+  const projectsList = data.projects;
+
   const VISIBLE_LIMIT = 3;
-  const visibleProjects = PROJECTS.slice(0, VISIBLE_LIMIT);
+  const visibleProjects = projectsList.slice(0, VISIBLE_LIMIT);
 
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2 className="section-title">LOGS_RECIENTES</h2>
+        <h2 className="section-title">{t.projects.title}</h2>
         
         <div className="projects-grid">
           {visibleProjects.map((proj, index) => (
@@ -20,23 +22,20 @@ export default function Projects({ onViewAll }) {
               <h3 className="project-title">{proj.title}</h3>
               <p style={{fontFamily: 'sans-serif', fontSize: '0.95rem'}}>{proj.description}</p>
               <div className="project-tech">
-                {proj.tech.map((t, i) => (
-                  <span key={i} className="tech-badge">{t}</span>
+                {proj.tech.map((techItem, i) => (
+                  <span key={i} className="tech-badge">{techItem}</span>
                 ))}
               </div>
               <a href={proj.link} target="_blank" rel="noopener noreferrer" className="project-link">
-                {">"} ACCEDER_SISTEMA
+                {t.projects.access}
               </a>
             </article>
           ))}
         </div>
 
         <div style={{textAlign: 'center', marginTop: '3rem'}}>
-          <button 
-            onClick={onViewAll} 
-            className="btn"
-          >
-            [ + ABRIR_DIRECTORIO_PROYECTOS ]
+          <button onClick={onViewAll} className="btn">
+            {t.projects.view_all}
           </button>
         </div>
 

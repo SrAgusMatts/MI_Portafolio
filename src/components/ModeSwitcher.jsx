@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaTerminal, FaEye } from 'react-icons/fa'; // Si no tienes react-icons, usa texto simple
+import { FaTerminal, FaEye } from 'react-icons/fa'; 
+import LanguageSwitcher from './LanguageSwitcher.jsx';
 
 export default function ModeSwitcher({ currentMode, toggleMode }) {
   return (
@@ -54,6 +55,7 @@ export default function ModeSwitcher({ currentMode, toggleMode }) {
       >
         DEV_CLI
       </button>
+      <LanguageSwitcher />
     </div>
   );
 }
