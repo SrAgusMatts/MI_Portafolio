@@ -17,10 +17,10 @@ import useRevealOnScroll from "./hooks/useRevealOnScroll";
 function App() {
   const [booting, setBooting] = useState(true);
   const [bootText, setBootText] = useState([]);
-  
+
   const [appMode, setAppMode] = useState('GUI');
-  
-  const [guiView, setGuiView] = useState('home'); 
+
+  const [guiView, setGuiView] = useState('home');
 
   useEffect(() => {
     const lines = ["INITIALIZING...", "LOADING KERNEL...", "ACCESS GRANTED."];
@@ -49,20 +49,22 @@ function App() {
       <div className="scanlines"></div>
       <div className="glow-overlay"></div>
 
-      <ModeSwitcher 
-        currentMode={appMode} 
-        toggleMode={setAppMode} 
-      />
-      
+      <div className="mode-switcher-sidebar">
+        <ModeSwitcher
+          currentMode={appMode}
+          toggleMode={setAppMode}
+        />
+      </div>
+
       {appMode === 'TERMINAL' ? (
         <TerminalView onExit={() => setAppMode('GUI')} />
       ) : (
         <>
           {guiView === 'archive' ? (
-             <ProjectArchive onBack={() => setGuiView('home')} />
+            <ProjectArchive onBack={() => setGuiView('home')} />
           ) : (
             <>
-              <Header />
+              <Header toggleMode={setAppMode} currentMode={appMode} />
               <main id="main">
                 <Hero />
                 <About />
