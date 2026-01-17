@@ -17,10 +17,11 @@ Estas son las tecnologías con las que trabajo:
 
 ## ✨ Proyectos Destacados
 
-Aquí puedes ver un ejemplo de mi trabajo, con un enlace directo a la aplicación:
+Aquí puedes ver ejemplos de mi trabajo, con enlaces directos a las aplicaciones:
 
 | Proyecto | Descripción | Tecnologías Clave | Enlace |
 | :--- | :--- | :--- | :--- |
+| **Semi-Clon de Trello** | Aplicación tipo Kanban que simula funcionalidades de Trello (tableros, listas, tarjetas). | React, Vite, CSS | [Ver Demo](https://kanban-trello-redesing.vercel.app) |
 | **Generador de contratos** | Aplicación web sencilla para la creación de contratos de trabajos y servicios. | JavaScript, HTML, CSS | [Ver Demo](https://sragusmatts.github.io/Generador-de-contratos-automatizado/) |
 
 ## 📚 Experiencia y Formación
@@ -60,10 +61,11 @@ These are the technologies I work with:
 
 ## ✨ Featured Projects
 
-Here you can see an example of my work, with a direct link to the application:
+Here you can see examples of my work, with direct links to the applications:
 
 | Project | Description | Key Tech | Link |
 | :--- | :--- | :--- | :--- |
+| **Trello Semi-Clone** | Kanban-style application simulating Trello features (boards, lists, cards). | React, Vite, CSS | [View Demo](https://kanban-trello-redesing.vercel.app) |
 | **Contract Generator** | Simple web application for creating job and service contracts. | JavaScript, HTML, CSS | [View Demo](https://sragusmatts.github.io/Generador-de-contratos-automatizado/) |
 
 ## 📚 Experience & Education
@@ -103,10 +105,11 @@ Estas são as tecnologias com as quais trabalho:
 
 ## ✨ Projetos em Destaque
 
-Aqui você pode ver um exemplo do meu trabalho, com um link direto para a aplicação:
+Aqui você pode ver exemplos do meu trabalho, com links diretos para as aplicações:
 
 | Projeto | Descrição | Tecnologias Chave | Link |
 | :--- | :--- | :--- | :--- |
+| **Semi-Clone do Trello** | Aplicação estilo Kanban que simula funcionalidades do Trello (quadros, listas, cartões). | React, Vite, CSS | [Ver Demo](https://kanban-trello-redesing.vercel.app) |
 | **Gerador de Contratos** | Aplicação web simples para a criação automatizada de contratos de trabalho e serviços. | JavaScript, HTML, CSS | [Ver Demo](https://sragusmatts.github.io/Generador-de-contratos-automatizado/) |
 
 ## 📚 Experiência e Formação
