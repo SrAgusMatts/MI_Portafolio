@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { PROJECTS } from "../data";
+import { useLanguage } from "./LanguageContext";
 
 export default function ProjectArchive({ onBack }) {
+  const { t, data } = useLanguage();
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,14 +21,14 @@ export default function ProjectArchive({ onBack }) {
             marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '10px'
           }}
         >
-          {"< [ VOLVER_AL_MENU_PRINCIPAL ]"}
+          {t.archive.back}
         </button>
-        <h2 className="section-title" style={{margin: 0}}>BASE_DATOS_COMPLETA</h2>
-        <p className="text-purple">Total de archivos encontrados: {PROJECTS.length}</p>
+        <h2 className="section-title" style={{margin: 0}}>{t.archive.title}</h2>
+        <p className="text-purple">{t.archive.total} {data.projects.length}</p>
       </div>
 
       <div className="projects-grid">
-        {PROJECTS.map((proj, index) => (
+        {data.projects.map((proj, index) => (
           <article key={index} className="project-card">
             <div style={{borderBottom: '1px dashed #003300', marginBottom: '10px', fontSize:'0.8rem', color: '#0f0'}}>
               ID: DB_PRJ_{index + 1}
@@ -35,12 +36,12 @@ export default function ProjectArchive({ onBack }) {
             <h3 className="project-title">{proj.title}</h3>
             <p style={{fontFamily: 'sans-serif', fontSize: '0.95rem'}}>{proj.description}</p>
             <div className="project-tech">
-              {proj.tech.map((t, i) => (
-                <span key={i} className="tech-badge">{t}</span>
+              {proj.tech.map((techItem, i) => (
+                <span key={i} className="tech-badge">{techItem}</span>
               ))}
             </div>
             <a href={proj.link} target="_blank" rel="noopener noreferrer" className="project-link">
-              {">"} ACCEDER_SISTEMA
+              {t.projects.access}
             </a>
           </article>
         ))}
